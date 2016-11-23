@@ -15,17 +15,19 @@ casButton.addEventListener("click", execute);
 function execute() {
     reset();
     var n = getUserInput();
-    for (var i = 0; i < n; i++) {
-        if (i === 0) {
-            // I'm always calculating (counting and saying) for 1, and then using it as an input for next level (depth) 
-            casString = countAndSay("1");
-        } else {
-            // after calculation for 1, the function is called repeatedly on the input of the previous level until reaching n (depth)
-            casString = countAndSay(casString);
+    if (n) {
+        for (var i = 0; i < n; i++) {
+            if (i === 0) {
+                // I'm always calculating (counting and saying) for 1, and then using it as an input for next level (depth) 
+                casString = countAndSay("1");
+            } else {
+                // after calculation for 1, the function is called repeatedly on the input of the previous level until reaching n (depth)
+                casString = countAndSay(casString);
+            }
         }
+        resultP.innerHTML = casString;
+        charsP.innerHTML = "Characters Processed: " + casString.length;
     }
-    resultP.innerHTML = casString;
-    charsP.innerHTML = "Characters Processed: " + casString.length;
 }
 
 
