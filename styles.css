@@ -1,0 +1,90 @@
+html, body {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#result-div {
+    width: 90%;
+    margin: 0 auto;
+    background-color: azure;
+    min-height: 200px;
+    border-radius: 5px;
+}
+
+#result-p {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Coiny', cursive;
+    color: darkblue;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: orange;
+    font-weight: bold;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+#outer-input-div {
+    height: 150px;
+    margin: 0 auto;
+}
+
+#inner-input-div {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    border-radius: 6px;
+}
+
+#depth-input-field, #cas-button {
+    margin: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    width: 90%;
+    color: white;
+    background-color: orange;
+    font-family: 'Arimo', sans-serif;
+}
+
+#cas-button {
+    border: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    font-size: 20px;
+}
+
+#cas-button:hover {
+    background-color: darkblue;
+    font-weight: bolder;
+}
+
+#depth-input-field {
+    display: inline-block;
+    border: 1px solid #cccccc;
+    font-weight: bold;
+    padding: 8px 0px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+    #wrapper {
+        width: 1200px;
+    }
+}
