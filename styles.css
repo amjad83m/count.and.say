@@ -14,7 +14,6 @@ html, body {
 #result-div {
     width: 90%;
     margin: 0 auto;
-    background-color: azure;
     min-height: 200px;
     border-radius: 5px;
 }
@@ -26,6 +25,10 @@ html, body {
     color: darkblue;
     width: 100%;
     word-wrap: break-word;
+    color: darkblue;
+    background-color: orange;
+    border-radius: 5px;
+    padding: 0 10px;
 }
 
 h1 {
@@ -37,7 +40,7 @@ h1 {
 }
 
 #outer-input-div {
-    height: 150px;
+    height: 200px;
     margin: 0 auto;
 }
 
@@ -58,8 +61,6 @@ h1 {
     border-radius: 5px;
     outline: none;
     width: 90%;
-    color: white;
-    background-color: orange;
     font-family: 'Arimo', sans-serif;
 }
 
@@ -68,6 +69,8 @@ h1 {
     cursor: pointer;
     padding: 14px 20px;
     font-size: 20px;
+    background-color: orange;
+    color: white;
 }
 
 #cas-button:hover {
@@ -79,10 +82,19 @@ h1 {
     display: inline-block;
     border: 1px solid #cccccc;
     font-weight: bold;
-    padding: 8px 0px;
+    padding: 8px 4px;
     font-size: 20px;
+    color: cadetblue;
 }
 
+#depth-label {
+    width: 90%;
+    color: white;
+    display: inline-block;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+}
 @media screen and (min-width: 1200px) {
     #wrapper {
         width: 1200px;

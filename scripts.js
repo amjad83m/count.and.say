@@ -7,10 +7,12 @@ var casButton = document.getElementById("cas-button");
 var depthInputField = document.getElementById("depth-input-field");
 
 depthInputField.addEventListener("focus", function() { depthInputField.value = "";});
+
 casButton.addEventListener("click", execute);
 
-// the function that gets user input and then calculating the result string (by calling the designated functions)
+// the function that gets user input and then calculates the result string (by calling the designated functions)
 function execute() {
+    reset();
     var n = getUserInput();
     for (var i = 0; i < n; i++) {
         if (i === 0) {
@@ -21,7 +23,7 @@ function execute() {
             casString = countAndSay(casString);
         }
     }
-    resultP.innerHTML = casString;   
+    resultP.innerHTML = casString;
 }
 
 
@@ -76,4 +78,9 @@ function getUserInput() {
         return false;
     }
     return input;
+}
+
+function reset() {
+    casString = "";
+    resultP.innerHTML = casString;
 }
