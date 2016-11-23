@@ -5,6 +5,7 @@ var casString = "";
 var resultP = document.getElementById("result-p");
 var casButton = document.getElementById("cas-button");
 var depthInputField = document.getElementById("depth-input-field");
+var charsP = document.getElementById("chars-p");
 
 depthInputField.addEventListener("focus", function() { depthInputField.value = "";});
 
@@ -24,6 +25,7 @@ function execute() {
         }
     }
     resultP.innerHTML = casString;
+    charsP.innerHTML = "Characters Processed: " + casString.length;
 }
 
 

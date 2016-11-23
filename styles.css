@@ -40,7 +40,7 @@ h1 {
 }
 
 #outer-input-div {
-    height: 200px;
+    height: 250px;
     margin: 0 auto;
 }
 
@@ -87,7 +87,7 @@ h1 {
     color: cadetblue;
 }
 
-#depth-label {
+#depth-label, #chars-p {
     width: 90%;
     color: white;
     display: inline-block;
@@ -95,6 +95,11 @@ h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
 }
+
+#chars-p {
+    text-align: center;
+}
+
 @media screen and (min-width: 1200px) {
     #wrapper {
         width: 1200px;
