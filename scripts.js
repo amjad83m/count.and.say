@@ -36,7 +36,6 @@ function countAndSay(phrase) {
     var count = 0;
     var currentChar = "";
     var nextChar = "";
-    // var result = [];
     var resultStr = "";
     
     // first loop, to iterate through the sentence (or the phrase), starting to count each element
@@ -54,19 +53,12 @@ function countAndSay(phrase) {
             i++;
         } while(currentChar === nextChar);
         
-        // finished counting the current element (character), adding the result to the results array
-        // result.push(count + currentChar);
+        // finished counting the current element (character), adding the result to the results string
         resultStr += count.toString() + currentChar;
         
         // reset the counter to count the occurencies of the next element
         count = 0;
     }
-    /*
-    // converting the results array into one continuous string (without spaces or commas)
-    for (var j = 0; j < result.length; j++) {
-        resultStr += result[j];
-    }
-    */
     return resultStr;
 }
 
