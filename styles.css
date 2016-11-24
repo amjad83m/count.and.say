@@ -27,7 +27,7 @@ html, body {
     word-wrap: break-word;
     background-color: orange;
     border-radius: 5px;
-    padding: 10px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
