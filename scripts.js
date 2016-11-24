@@ -81,4 +81,5 @@ function getUserInput() {
 function reset() {
     casString = "";
     resultP.innerHTML = casString;
+    charsP.innerHTML = "Characters Processed: ";
 }
