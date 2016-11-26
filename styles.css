@@ -40,7 +40,7 @@ h1 {
 }
 
 #outer-input-div {
-    height: 250px;
+    height: 320px;
     margin: 0 auto;
 }
 
@@ -86,16 +86,18 @@ h1 {
     color: cadetblue;
 }
 
-#depth-label, #chars-p {
+#depth-label, #chars-p, #exe-time-p {
     width: 90%;
     color: white;
-    display: inline-block;
-    text-align: left;
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
 }
 
-#chars-p {
+#depth-label {
+    text-align: left;
+}
+
+#chars-p, #exe-time-p {
     text-align: center;
 }
 

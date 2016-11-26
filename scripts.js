@@ -6,6 +6,12 @@ var resultP = document.getElementById("result-p");
 var casButton = document.getElementById("cas-button");
 var depthInputField = document.getElementById("depth-input-field");
 var charsP = document.getElementById("chars-p");
+var exeTimeP = document.getElementById("exe-time-p");
+
+// the following 3 parameters are irrelevant to the problem being solved, just to calculate the execution time - for testing purposes only
+var startT = null; // starting time, clicking the button to calculate (count and say)
+var endT = null; // end time, when getting the final string (and before writing it to the webpage)
+var exeT = 0.0; // the execution time, in milliseconds
 
 depthInputField.addEventListener("focus", function() { depthInputField.value = "";});
 
@@ -13,6 +19,7 @@ casButton.addEventListener("click", execute);
 
 // the function that gets user input and then calculates the result string (by calling the designated functions)
 function execute() {
+    startT = new Date().getTime();
     reset();
     var n = getUserInput();
     if (n) {
@@ -25,6 +32,7 @@ function execute() {
                 casString = countAndSay(casString);
             }
         }
+        exeTimeP.innerHTML = "Execution Time: " + (exeT / 1000).toFixed(3) + " seconds!";
         resultP.innerHTML = casString;
         charsP.innerHTML = "Characters Processed: " + casString.length;
     }
@@ -37,7 +45,7 @@ function countAndSay(phrase) {
     var currentChar = "";
     var nextChar = "";
     var resultStr = "";
-    
+
     // first loop, to iterate through the sentence (or the phrase), starting to count each element
     while (i < phrase.length) {
         
@@ -59,6 +67,8 @@ function countAndSay(phrase) {
         // reset the counter to count the occurencies of the next element
         count = 0;
     }
+    endT = new Date().getTime();
+    exeT = endT - startT;
     return resultStr;
 }
 
@@ -82,4 +92,5 @@ function reset() {
     casString = "";
     resultP.innerHTML = casString;
     charsP.innerHTML = "Characters Processed: ";
+    exeTimeP.innerHTML = "Execution Time: ";
 }
